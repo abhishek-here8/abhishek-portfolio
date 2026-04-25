@@ -3,134 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Jandu | AI & ML Developer</title>
+    <title>Abhishek Jandu | AI & ML Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <div style="font-size: 22px; font-weight: bold;">Abhishek<span style="color:var(--primary);">Jandu</span></div>
-    <nav style="display: flex; gap: 20px;">
-        <a href="#about" style="color:white; text-decoration:none; font-size:14px;">Education</a>
-        <a href="#skills" style="color:white; text-decoration:none; font-size:14px;">Skills</a>
-        <a href="#projects" style="color:white; text-decoration:none; font-size:14px;">Projects</a>
-        <a href="#contact" style="color:white; text-decoration:none; font-size:14px;">Contact</a>
+<header style="display:flex; justify-content:space-between; padding:20px 8%; position:sticky; top:0; background:rgba(5,5,5,0.9); z-index:1000;">
+    <div style="font-size: 24px; font-weight: bold;">Abhishek<span style="color:var(--primary);">Jandu</span></div>
+    <nav style="display: flex; gap: 25px;">
+        <a href="#about" style="color:white; text-decoration:none;">Education</a>
+        <a href="#skills" style="color:white; text-decoration:none;">Toolkit</a>
+        <a href="#projects" style="color:white; text-decoration:none;">Projects</a>
     </nav>
 </header>
 
-<section class="container">
-    <h1 style="font-size: 3rem; margin-bottom: 10px;">Architecting the <span class="gradient-text">AI Future</span></h1>
+<section class="container" style="text-align: center; padding: 100px 10% 50px;">
+    <h1 style="font-size: 3.5rem;">The <span class="gradient-text">AI Revolution</span> by Abhishek</h1>
     
-    <div class="profile-box">
+    <div style="margin: 40px 0;">
         <img src="profile.jpg" alt="Abhishek Jandu" class="profile-img">
-        
-        <div style="max-width: 700px; margin: 25px auto; text-align: center;">
-            <h3 class="gradient-text" style="font-size: 1.8rem;">Who Am I?</h3>
-            <p style="color: #ccc; line-height: 1.8; font-size: 1.1rem;">
-                I am a motivated AI and Machine Learning undergraduate at CGC University, Mohali. 
-                With a strong academic record (CGPA: 9.05), I focus on building practical digital platforms 
-                and AI-driven solutions like EXAMIA. Beyond technology, I am a content creator 
-                behind the YouTube channel <b>MIND BEHIND</b>, where I produce educational documentaries.
-            </p>
-            <a href="Abhishek_Resume.pdf" download class="btn btn-s" style="margin-top: 15px; display: inline-flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-download"></i> Download Resume
-            </a>
-        </div>
+    </div>
 
-        <div class="social-icons">
-            <a href="https://github.com/abhishek-here8" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/abhishek-jandu-85b41a37a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/oyyee_abhi_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <div style="max-width: 700px; margin: 0 auto;">
+        <h3 class="gradient-text">Who Am I?</h3>
+        <p style="color: #ccc; line-height: 1.8;">
+            I am a motivated AI and Machine Learning student at CGC University (CGPA: 9.05). 
+            I build practical digital platforms and AI solutions. Also the creator of 
+            <b>MIND BEHIND</b> YouTube channel, documenting the intersection of tech and history.
+        </p>
+        <a href="Abhishek_Resume.pdf" download class="btn btn-p" style="margin-top:20px; display:inline-block;">
+            <i class="fa-solid fa-file-pdf"></i> Resume
+        </a>
+    </div>
+</section>
+
+<section id="skills" style="padding: 80px 10%;">
+    <h2 class="gradient-text">Technical Toolkit</h2>
+    <div class="skills-grid">
+        <div class="skill-box"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="skill-box"><i class="fa-solid fa-c"></i> C Programming</div>
+        <div class="skill-box"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="skill-box"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+        <div class="skill-box"><i class="fa-brands fa-github"></i> Git Hub</div>
+        <div class="skill-box"><i class="fa-solid fa-microchip"></i> Machine Learning</div>
+    </div>
+</section>
+
+<section id="projects" style="padding: 80px 10%;">
+    <h2 class="gradient-text">Featured Projects</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div class="glass-card">
+            <h3>EXAMIA</h3>
+            <p>JEE Preparation platform for students.</p>
+            <div style="margin-top: 15px; display: flex; gap: 15px;">
+                <a href="https://examia-ygb1.onrender.com/" target="_blank" title="Live Link" style="color:var(--accent); font-size: 20px;"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://github.com/abhishek-here8/examia" target="_blank" title="GitHub" style="color:white; font-size: 20px;"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="glass-card">
+            <h3>AI Drawing Recognition</h3>
+            <p>ML Game that detects canvas sketches.</p>
+            <div style="margin-top: 15px; display: flex; gap: 15px;">
+                <a href="https://github.com/abhishek-here8/numbergussessinggame.c" target="_blank" title="GitHub" style="color:white; font-size: 20px;"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="about" class="container" style="background: rgba(255,255,255,0.01);">
-    <h2 style="text-align:left;">// Education</h2>
-    <div class="grid">
-        <div class="glass-card">
-            <h3>B.Tech (AI & ML)</h3>
-            <p>CGC University, Mohali </p>
-            <p class="gradient-text">CGPA: 9.05</p>
-            <small>2025 - 2029</small>
-        </div>
-        <div class="glass-card">
-            <h3>Senior Secondary</h3>
-            <p>Shikshan Awan Anusandhan Sansthan School Palsana, Sikar, Rajasthan </p>
-            <p class="gradient-text">Percentage: 76.2% </p>
-            <small>Passing year: 2024</small>
-        </div>
-        <div class="glass-card">
-            <h3>Secondary</h3>
-            <p>Saraswati Vidya Mandir Senior Secondary School, Sirsa, Haryana </p>
-            <p class="gradient-text">Percentage: 93.2% </p>
-            <small>Passing year: 2022</small>
-        </div>
+<section id="contact" style="padding: 80px 10%;">
+    <h2 class="gradient-text">Get In Touch</h2>
+    <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+        <form action="https://formspree.io/f/janduabhishek8@gmail.com" method="POST" style="display:flex; flex-direction:column; gap:15px;">
+            <input type="text" name="name" placeholder="Name" required style="padding:12px; background:#111; border:1px solid #333; color:white; border-radius:8px;">
+            <input type="email" name="email" placeholder="Email" required style="padding:12px; background:#111; border:1px solid #333; color:white; border-radius:8px;">
+            <textarea name="message" placeholder="Your Message" rows="4" required style="padding:12px; background:#111; border:1px solid #333; color:white; border-radius:8px;"></textarea>
+            <button type="submit" class="btn btn-p" style="border:none; cursor:pointer;">Send Message</button>
+        </form>
     </div>
 </section>
 
-<section id="skills" class="container">
-    <h2 style="text-align:left;">// My Toolkit</h2>
-    <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start; margin-top: 20px;">
-        <div class="skill-tag"><i class="fa-brands fa-python"></i> Python </div>
-        <div class="skill-tag"><i class="fa-solid fa-c"></i> C Programming </div>
-        <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML </div>
-        <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS </div>
-        <div class="skill-tag"><i class="fa-brands fa-github"></i> Git/GitHub</div>
-        <div class="skill-tag"><i class="fa-solid fa-brain"></i> Machine Learning </div>
-    </div>
-</section>
-
-<section id="projects" class="container">
-    <h2 style="text-align:left;">// Featured Projects</h2>
-    <div class="grid">
-        <div class="glass-card">
-            <h3 class="gradient-text">EXAMIA</h3>
-            <p>Smart exam preparation platform for JEE students with AI chatbot.</p>
-            <a href="https://github.com/abhishek-here8/examia" target="_blank" style="color:var(--accent); text-decoration:none;">View Code ↗</a>
-        </div>
-        <div class="glass-card">
-            <h3 class="gradient-text">Drawing Recognition</h3>
-            <p>Interactive game using Machine Learning to recognize sketches.</p>
-            <a href="https://github.com/abhishek-here8/numbergussessinggame.c" target="_blank" style="color:var(--accent); text-decoration:none;">View Code ↗</a>
-        </div>
-    </div>
-</section>
-
-<section id="youtube" class="container">
-    <div class="yt-card" style="background: linear-gradient(135deg, rgba(255,0,0,0.1) 0%, rgba(157,0,255,0.1) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px;">
-        <div style="color: #ff0000; font-weight: bold; font-size: 28px;"><i class="fa-brands fa-youtube"></i> MIND BEHIND</div>
-        <h2 style="margin-top:10px;">Educational and Documentaries</h2>
-        <p style="color:#ccc; margin: 15px 0;">Sharing insights on tech, history, and global narratives.</p>
-        <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" class="btn btn-p" style="background:#ff0000; border:none;">Subscribe Now</a>
-    </div>
-</section>
-
-<section id="contact" class="container">
-    <h2 style="text-align:left;">// Let's Connect</h2>
-    <div class="grid">
-        <div class="glass-card">
-            <h3 style="margin-bottom: 20px;">Send a Message</h3>
-            <form action="https://formspree.io/f/janduabhishek8@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;">
-                <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;">
-                <textarea name="message" placeholder="Message" rows="4" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;"></textarea>
-                <button type="submit" class="btn btn-p" style="border: none; cursor: pointer;">Send Now</button>
-            </form>
-        </div>
-        <div class="glass-card">
-            <h3>Direct Info</h3>
-            <p style="color:#aaa;"><i class="fa-solid fa-envelope"></i> janduabhishek8@gmail.com</p>
-            <p style="color:#aaa;"><i class="fa-solid fa-phone"></i> +91 7027045075 </p>
-            <p style="color:#aaa;"><i class="fa-solid fa-location-dot"></i> Sirsa, Haryana </p>
-        </div>
-    </div>
-</section>
-
-<footer style="padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-    <p style="color:#555; font-size: 13px;">&copy; 2026 Abhishek Jandu. Built with passion.</p>
+<footer style="padding: 40px; text-align:center; opacity:0.5; font-size:12px;">
+    &copy; 2026 Abhishek Jandu | MIND BEHIND
 </footer>
 
 </body>
