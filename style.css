@@ -1,42 +1,11 @@
-/* Unique Minimalist Gradient Theme */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
+/* Naya Unique UI Code */
 :root {
-    --bg-dark: #000000;
-    --primary: #9d00ff; /* Deep Purple */
-    --accent: #00f2fe;  /* Electric Cyan */
-    --text: #e0e0e0;
-    --sub-text: #888888;
-    --card-bg: #111111;
-    --border: #222222;
-    --transition: all 0.3s ease;
+    --bg: #050505;
+    --glow: #9d00ff;
+    --accent: #00f2fe;
+    --card: #111111;
 }
-
-body {
-    background-color: var(--bg-dark);
-    color: var(--text);
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* Base styling for layout */
-.section { padding: 80px 10%; min-height: 100vh; }
-
-/* Dynamic Background Aura Animation */
-body::before {
-    content: '';
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(157, 0, 255, 0.15) 0%, rgba(0, 242, 254, 0.05) 40%, rgba(0,0,0,0) 70%);
-    z-index: -1;
-    filter: blur(80px);
-    animation: auraPulse 10s ease-in-out infinite alternate;
-}
-
-@keyframes auraPulse {
-    0% { opacity: 0.5; width: 600px; }
-    100% { opacity: 1; width: 700px; }
-}
+body { background: var(--bg); color: white; font-family: sans-serif; }
+.gradient-text { background: linear-gradient(90deg, var(--glow), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+.glass-card { background: var(--card); border: 1px solid #222; border-radius: 15px; padding: 25px; transition: 0.3s; }
+.glass-card:hover { border-color: var(--glow); box-shadow: 0 0 20px rgba(157, 0, 255, 0.2); }
