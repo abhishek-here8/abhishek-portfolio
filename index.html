@@ -14,78 +14,63 @@
     <nav style="display: flex; gap: 20px;">
         <a href="#about" style="color:white; text-decoration:none; font-size:14px;">Education</a>
         <a href="#projects" style="color:white; text-decoration:none; font-size:14px;">Projects</a>
-        <a href="#youtube" style="color:white; text-decoration:none; font-size:14px;">YouTube</a>
+        <a href="#contact" style="color:white; text-decoration:none; font-size:14px;">Contact</a>
     </nav>
 </header>
 
 <section class="container">
     <h1 style="font-size: 3rem; margin-bottom: 10px;">Architecting the <span class="gradient-text">AI Future</span></h1>
-    <p style="color: #aaa; margin-bottom: 30px;">B.Tech AI & ML Student | Content Creator @ MIND BEHIND</p>
     
-    <div style="margin-bottom: 40px;">
-        <a href="#projects" class="btn btn-p">Explore Projects</a>
-    </div>
-
     <div class="profile-box">
         <img src="profile.jpg" alt="Abhishek Jandu" class="profile-img">
         
+        <div style="max-width: 600px; margin: 20px auto; text-align: center;">
+            <h3 class="gradient-text">Who Am I?</h3>
+            <p style="color: #ccc; line-height: 1.6;">
+                I am a dedicated AI & ML enthusiast currently pursuing my B.Tech at CGC University with a strong academic record. 
+                My passion lies in bridging the gap between complex Machine Learning algorithms and user-friendly web applications. 
+                Beyond coding, I am a tech storyteller, exploring global narratives through my YouTube channel, MIND BEHIND. 
+                I thrive on solving real-world problems and am always eager to learn and build something impactful.
+            </p>
+            <a href="Abhishek_Resume.pdf" download class="btn btn-s" style="margin-top: 15px;">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+        </div>
+
         <div class="social-icons">
-            <a href="https://github.com/abhishek-here8" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/abhishek-jandu-85b41a37a/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/oyyee_abhi_/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/abhishek-here8" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhishek-jandu-85b41a37a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/oyyee_abhi_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </div>
 </section>
 
-<section id="about" class="container" style="background: rgba(255,255,255,0.01);">
-    <h2 style="text-align:left;">// Education</h2>
+<section id="contact" class="container">
+    <h2 style="text-align:left;">// Get In Touch</h2>
     <div class="grid">
         <div class="glass-card">
-            <h3>B.Tech (AI & ML) [cite: 6]</h3>
-            <p>CGC University, Mohali [cite: 7, 8]</p>
-            <p class="gradient-text">CGPA: 9.05 [cite: 9]</p>
+            <h3 style="margin-bottom: 20px;">Send a Message</h3>
+            <form action="https://formspree.io/f/janduabhishek8@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;">
+                <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;">
+                <input type="tel" name="phone" placeholder="Your Phone Number" style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;">
+                <textarea name="message" placeholder="Your Message" rows="4" required style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #111; color: white;"></textarea>
+                <button type="submit" class="btn btn-p" style="border: none; cursor: pointer;">Send Message</button>
+            </form>
         </div>
+        
         <div class="glass-card">
-            <h3>Senior Secondary</h3>
-            <p>SSAS School, Rajasthan [cite: 11, 12]</p>
-            <p>Score: 76.2% [cite: 13]</p>
+            <h3>Contact Details</h3>
+            <p style="color:#aaa;"><i class="fa-solid fa-envelope"></i> janduabhishek8@gmail.com</p>
+            <p style="color:#aaa;"><i class="fa-solid fa-phone"></i> +91 7027045075</p>
+            <p style="color:#aaa;"><i class="fa-solid fa-location-dot"></i> Sirsa, Haryana</p>
         </div>
-        <div class="glass-card">
-            <h3>Secondary</h3>
-            <p>SVM School, Haryana [cite: 15, 16]</p>
-            <p>Score: 93.2% [cite: 17]</p>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="container">
-    <h2 style="text-align:left;">// Featured Projects</h2>
-    <div class="grid">
-        <div class="glass-card">
-            <h3 class="gradient-text">EXAMIA</h3>
-            <p>JEE Preparation platform with AI assistant. [cite: 19, 23]</p>
-            <a href="https://github.com/abhishek-here8/examia" target="_blank" style="color:var(--accent); text-decoration:none;">Repo ↗</a>
-        </div>
-        <div class="glass-card">
-            <h3 class="gradient-text">Drawing Recognition</h3>
-            <p>AI game that detects sketches using ML. [cite: 25, 26]</p>
-            <a href="https://github.com/abhishek-here8/numbergussessinggame.c" target="_blank" style="color:var(--accent); text-decoration:none;">Repo ↗</a>
-        </div>
-    </div>
-</section>
-
-<section id="youtube" class="container">
-    <div class="yt-card">
-        <div class="yt-logo"><i class="fa-brands fa-youtube"></i> MIND BEHIND</div>
-        <h2 style="margin-top:10px;">Educational Documentaries</h2>
-        <p style="color:#ccc; max-width:600px; margin: 15px auto;">Exploring deep tech, history, and complex global stories through high-quality visual storytelling.</p>
-        <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" class="btn btn-p" style="background:#ff0000; box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);">Subscribe Now</a>
     </div>
 </section>
 
 <footer style="padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-    <p style="color:#555; font-size: 13px;">&copy; 2026 Abhishek Jandu. Built for the future.</p>
+    <p style="color:#555; font-size: 13px;">&copy; 2026 Abhishek Jandu</p>
 </footer>
 
 </body>
