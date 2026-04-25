@@ -1,130 +1,42 @@
+/* Unique Minimalist Gradient Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 :root {
-    --bg-color: #0d0d1a; /* Very dark blue/purple bg */
-    --text-color: #e0e0e0;
-    --primary-color: #a374ff; /* Purple highlight */
-    --navbar-bg: #151525;
-    --border-color: #2a2a40;
+    --bg-dark: #000000;
+    --primary: #9d00ff; /* Deep Purple */
+    --accent: #00f2fe;  /* Electric Cyan */
+    --text: #e0e0e0;
+    --sub-text: #888888;
+    --card-bg: #111111;
+    --border: #222222;
+    --transition: all 0.3s ease;
 }
 
 body {
+    background-color: var(--bg-dark);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-.highlight {
-    color: var(--primary-color);
+/* Base styling for layout */
+.section { padding: 80px 10%; min-height: 100vh; }
+
+/* Dynamic Background Aura Animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(157, 0, 255, 0.15) 0%, rgba(0, 242, 254, 0.05) 40%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+    filter: blur(80px);
+    animation: auraPulse 10s ease-in-out infinite alternate;
 }
 
-/* Step 2: Navbar CSS */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: var(--navbar-bg);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+@keyframes auraPulse {
+    0% { opacity: 0.5; width: 600px; }
+    100% { opacity: 1; width: 700px; }
 }
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.logo span { color: var(--primary-color); }
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    opacity: 0.8;
-}
-nav a:hover { opacity: 1; }
-
-.lets-talk-btn {
-    text-decoration: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Step 3: Hero Section CSS */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-}
-
-.hero-content { flex: 1.5; padding-right: 50px; }
-
-.opportunities-badge {
-    color: var(--primary-color);
-    border: 1px solid var(--border-color);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
-.hero-content p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 30px; }
-
-.hero-btns { display: flex; gap: 15px; margin-bottom: 30px; }
-.btn {
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.primary-btn { background-color: var(--primary-color); color: #fff; }
-.secondary-btn { background-color: transparent; border: 1px solid var(--border-color); color: var(--text-color); }
-
-.social-links { display: flex; gap: 20px; font-size: 1.3rem; }
-.social-links a { color: var(--text-color); opacity: 0.7; }
-.social-links a:hover { color: var(--primary-color); opacity: 1; }
-
-.hero-image-container { flex: 1; position: relative; display: flex; justify-content: center; }
-.hero-image-circle {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    border: 5px solid var(--primary-color);
-    overflow: hidden;
-}
-.profile-img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Floating skill tags (Design tweak) */
-.skill-tag {
-    position: absolute;
-    background-color: var(--navbar-bg);
-    border: 1px solid var(--border-color);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    color: var(--text-color);
-}
-.skill-1 { top: 10px; left: -30px; }
-.skill-2 { top: 80px; right: -20px; }
-.skill-3 { bottom: 30px; right: 10px; }
-.skill-4 { top: 200px; left: -50px; }
