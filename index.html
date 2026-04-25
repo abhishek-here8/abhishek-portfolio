@@ -3,101 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abhishek Jandu — AI & Machine Learning student at CGC University building practical AI platforms and tools.">
     <title>Abhishek Jandu | AI & ML Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header style="display:flex; justify-content:space-between; padding:20px 10%; position:sticky; top:0; background:rgba(10, 11, 30, 0.8); backdrop-filter:blur(10px); z-index:1000;">
-    <div style="font-size: 24px; font-weight: 800;">Abhishek<span style="color:var(--primary);">Jandu</span></div>
-    <nav style="display: flex; gap: 25px;">
-        <a href="#about" style="color:white; text-decoration:none;">Education</a>
-        <a href="#projects" style="color:white; text-decoration:none;">Projects</a>
-        <a href="#skills" style="color:white; text-decoration:none;">Skills</a>
-        <a href="#contact" style="color:white; text-decoration:none;">Contact</a>
+<!-- ── NAVBAR ─────────────────────────────────────────────────────────── -->
+<header class="navbar">
+    <div class="nav-logo">Abhishek<span class="accent">.</span></div>
+    <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 </header>
 
-<section class="container">
-    <div class="hero-flex">
-        <div class="hero-left">
-            <h1 style="font-size: 3.2rem;">Building the <span class="gradient-text">Future of AI</span></h1>
-            <h3 class="gradient-text" style="font-size: 1.8rem;">Who Am I?</h3>
-            <p style="color: #d1d1d1; line-height: 1.8; font-size: 1.1rem;">
-                I am a motivated AI and Machine Learning student at CGC University, Mohali (CGPA: 9.05). 
-                I focus on building practical digital platforms and AI solutions like <b>EXAMIA</b>. 
-                I also run the <b>MIND BEHIND</b> YouTube channel, where I explore tech and history through storytelling.
-            </p>
-            <div style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
-                <a href="Abhishek_Resume.pdf" download class="btn btn-p"><i class="fa-solid fa-download"></i> Resume</a>
-                <div style="display: flex; gap: 20px; font-size: 28px;">
-                    <a href="https://github.com/abhishek-here8" target="_blank" style="color:white;"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/abhishek-jandu-85b41a37a/" target="_blank" style="color:white;"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/oyyee_abhi_/" target="_blank" style="color:white;"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" style="color:white;"><i class="fa-brands fa-youtube"></i></a>
+<!-- ── HERO ───────────────────────────────────────────────────────────── -->
+<section class="hero container">
+    <div class="hero-left">
+        <p class="hero-eyebrow">AI & ML Developer</p>
+        <h1 class="hero-title"><span class="gradient-text">Building the Future of AI</span></h1>
+        <p class="hero-bio">
+            I'm a motivated AI and Machine Learning student at CGC University, Mohali (CGPA: 9.05).
+            I focus on building practical digital platforms and AI solutions like <strong>EXAMIA</strong>.
+            I also run <strong>MIND BEHIND</strong> — a YouTube channel exploring tech and history through storytelling.
+        </p>
+        <div class="hero-actions">
+            <a href="Abhishek_Resume.pdf" download class="btn btn-primary">
+                <i class="fa-solid fa-download"></i> Resume
+            </a>
+            <div class="social-icons">
+                <a href="https://github.com/abhishek-here8" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/abhishek-jandu-85b41a37a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/oyyee_abhi_/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="image-container" id="move-box">
+            <img src="profile.jpg"
+                 alt="Abhishek Jandu, AI and Machine Learning student"
+                 class="profile-img"
+                 id="moving-img">
+        </div>
+    </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────────────────── -->
+<section id="about" class="container reveal">
+    <h2 class="section-title gradient-text">Academic Journey</h2>
+    <div class="card-grid">
+        <div class="glass-card">
+            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>B.Tech — AI & ML</h3>
+            <p class="card-inst">CGC University, Mohali, Punjab</p>
+            <p class="card-score gradient-text">9.05 CGPA</p>
+            <small class="card-year">2025 – 2029</small>
+        </div>
+        <div class="glass-card">
+            <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+            <h3>Senior Secondary — CBSE</h3>
+            <p class="card-inst">Shikshan Awan Anusandhan Sansthan School, Palsana, Sikar</p>
+            <p class="card-score gradient-text">76.2%</p>
+            <small class="card-year">Passing Year: 2024</small>
+        </div>
+        <div class="glass-card">
+            <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+            <h3>Secondary — HBSE</h3>
+            <p class="card-inst">Saraswati Vidya Mandir Senior Secondary School, Sirsa</p>
+            <p class="card-score gradient-text">93.2%</p>
+            <small class="card-year">Passing Year: 2022</small>
+        </div>
+    </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────────────────────────── -->
+<section id="projects" class="container reveal">
+    <h2 class="section-title gradient-text">Featured Projects</h2>
+    <div class="card-grid">
+        <div class="glass-card project-card">
+            <div class="project-header">
+                <h3>EXAMIA</h3>
+                <div class="project-links">
+                    <a href="https://examia-ygb1.onrender.com/" target="_blank" rel="noopener" aria-label="Live site" class="project-link">
+                        <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a href="https://github.com/abhishek-here8/examia" target="_blank" rel="noopener" aria-label="GitHub repo" class="project-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
             </div>
+            <p class="project-desc">Smart platform for JEE preparation with AI chatbot assistance, login/signup, phone verification, and student profile system.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Render</span>
+                <span class="tech-tag">AI API</span>
+            </div>
         </div>
-        <div class="hero-right">
-            <div class="image-container" id="move-box">
-                <img src="profile.jpg" alt="Abhishek Jandu" class="profile-img" id="moving-img">
+        <div class="glass-card project-card">
+            <div class="project-header">
+                <h3>AI Drawing Recognition</h3>
+                <div class="project-links">
+                    <a href="https://github.com/abhishek-here8/numbergussessinggame.c" target="_blank" rel="noopener" aria-label="GitHub repo" class="project-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="project-desc">Machine learning project that recognises real-time user sketches on an interactive canvas using ML detection logic.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Canvas</span>
+                <span class="tech-tag">ML</span>
             </div>
         </div>
     </div>
 </section>
 
-<section id="about" class="container reveal">
-    <h2 class="gradient-text">Academic Journey</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-        <div class="glass-card">
-            <h3>B.Tech (AI & ML)</h3>
-            <p>CGC University, Mohali, Punjab</p>
-            <p>Score: <span class="gradient-text">9.05 CGPA</span></p>
-            <small>2025-2029</small>
-        </div>
-        <div class="glass-card">
-            <h3>Senior Secondary (CBSE)</h3>
-            <p>Shikshan Awan Anusandhan Sansthan School, Palsana, Sikar, Rajasthan</p>
-            <p>Score: <span class="gradient-text">76.2%</span></p>
-            <small>Passing Year: 2024</small>
-        </div>
-        <div class="glass-card">
-            <div style="position: absolute; top: 10px; right: 10px; font-size: 10px; background: gold; color: black; padding: 2px 8px; border-radius: 10px; font-weight: bold;">TOPPER</div>
-            <h3>Secondary (HBSE)</h3>
-            <p>Saraswati Vidya Mandir Senior Secondary School, Madhosinghana, Sirsa, Haryana</p>
-            <p>Score: <span class="gradient-text">93.2%</span></p>
-            <small>Passing Year: 2022</small>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="container reveal">
-    <h2 class="gradient-text">Featured Projects</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
-        <div class="glass-card">
-            <h3>EXAMIA</h3>
-            <p>Smart platform for JEE preparation with AI assistance.</p>
-            <div style="margin-top: 15px; display: flex; gap: 20px;">
-                <a href="https://examia-ygb1.onrender.com/" target="_blank" style="color:var(--accent); font-size: 24px;"><i class="fa-solid fa-globe"></i></a>
-                <a href="https://github.com/abhishek-here8/examia" target="_blank" style="color:white; font-size: 24px;"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-        <div class="glass-card">
-            <h3>AI Drawing Recognition</h3>
-            <p>Machine Learning project recognizing real-time sketches.</p>
-            <div style="margin-top: 15px;">
-                <a href="https://github.com/abhishek-here8/numbergussessinggame.c" target="_blank" style="color:white; font-size: 24px;"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
 <section id="skills" class="container reveal">
-    <h2 class="gradient-text">Technical Toolkit</h2>
-    <div class="glass-card">
+    <h2 class="section-title gradient-text">Technical Toolkit</h2>
+    <div class="glass-card skills-card">
         <div class="skill-category">
-            <h4>Languages</h4>
+            <h4 class="skill-cat-title">Languages</h4>
             <div class="skill-list">
                 <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
                 <span class="skill-tag"><i class="fa-solid fa-code"></i> C Programming</span>
@@ -105,9 +150,8 @@
                 <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
             </div>
         </div>
-
         <div class="skill-category">
-            <h4>Tools & Platforms</h4>
+            <h4 class="skill-cat-title">Tools & Platforms</h4>
             <div class="skill-list">
                 <span class="skill-tag"><i class="fa-solid fa-laptop-code"></i> VS Code</span>
                 <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</span>
@@ -116,79 +160,112 @@
                 <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
             </div>
         </div>
-
         <div class="skill-category">
-            <h4>Core Techniques</h4>
-            <ul style="padding: 0; list-style: none; margin-top: 10px;">
-                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem; margin-bottom: 8px;"><i class="fa-solid fa-brain"></i> Machine Learning & AI Fundamentals</li>
-                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem;"><i class="fa-solid fa-check"></i> Problem Solving & Logical Thinking</li>
+            <h4 class="skill-cat-title">Core Techniques</h4>
+            <div class="skill-list">
+                <span class="skill-tag"><i class="fa-solid fa-brain"></i> Machine Learning & AI</span>
+                <span class="skill-tag"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                <span class="skill-tag"><i class="fa-solid fa-check"></i> Logical Thinking</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── YOUTUBE ────────────────────────────────────────────────────────── -->
+<section id="youtube" class="container reveal">
+    <div class="glass-card youtube-card">
+        <div class="yt-icon"><i class="fa-brands fa-youtube"></i></div>
+        <h2 class="yt-title">MIND BEHIND</h2>
+        <p class="yt-desc">Documenting the intersection of technology and history through storytelling.</p>
+        <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" rel="noopener" class="btn btn-yt">
+            Visit Channel <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────────────────── -->
+<section id="contact" class="container reveal">
+    <h2 class="section-title gradient-text">Let's Connect</h2>
+    <div class="contact-grid">
+        <div class="glass-card contact-info">
+            <h3>Direct Info</h3>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-envelope accent"></i> janduabhishek8@gmail.com</li>
+                <li><i class="fa-solid fa-phone accent"></i> +91 7027045075</li>
+                <li><i class="fa-solid fa-location-dot accent"></i> Sirsa, Haryana, India</li>
             </ul>
         </div>
-    </div>
-</section>
-
-<section id="youtube" class="container reveal">
-    <div class="glass-card" style="text-align: center; border: 2px solid rgba(255, 0, 0, 0.3);">
-        <h2 style="color: #ff0000;"><i class="fa-brands fa-youtube"></i> MIND BEHIND</h2>
-        <p style="font-size: 1.2rem; color: #ccc;">Documenting the intersection of technology and history.</p>
-        <a href="https://www.youtube.com/channel/UCOzXnxlOJKbv5rieFE5WhGA" target="_blank" class="btn" style="background:#ff0000; color:white; margin-top: 10px;">Visit Channel</a>
-    </div>
-</section>
-
-<section id="contact" class="container reveal">
-    <h2 class="gradient-text">Let's Connect</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         <div class="glass-card">
-            <h3>Direct Info</h3>
-            <p style="margin-top: 15px;"><i class="fa-solid fa-envelope" style="color:var(--primary);"></i> janduabhishek8@gmail.com</p>
-            <p><i class="fa-solid fa-phone" style="color:var(--primary);"></i> +91 7027045075</p>
-            <p><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> Sirsa, Haryana, India</p>
-        </div>
-        <div class="glass-card">
-            <form action="https://formspree.io/f/xeevnyrv" method="POST" style="display:flex; flex-direction:column; gap:15px;">
-                <input type="text" name="name" placeholder="Name" required style="padding:12px; background:#111; border:1px solid #333; color:white; border-radius:8px;">
-                <input type="email" name="email" placeholder="Email" required style="padding:12px; background:#111; border:1px solid #333; color:white; border-radius:8px;">
-                <textarea name="message" placeholder="Message" rows="3" required style="padding:12px; background:#111; border:1px solid #333; color:white; border-radius:8px;"></textarea>
-                <button type="submit" class="btn btn-p" style="border:none; cursor:pointer;">Send Now</button>
+            <h3>Send a Message</h3>
+            <form action="https://formspree.io/f/xeevnyrv" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" rows="3" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Now <i class="fa-solid fa-paper-plane"></i></button>
             </form>
         </div>
     </div>
 </section>
 
-<footer style="padding: 40px; text-align: center; opacity: 0.6;">
-    &copy; 2026 Abhishek Jandu | All Rights Reserved.
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer class="footer">
+    &copy; 2026 Abhishek Jandu — All Rights Reserved.
 </footer>
 
 <script>
-    // 1. Cursor Movement Logic
-    const box = document.getElementById('move-box');
-    const img = document.getElementById('moving-img');
+/* ── Hamburger menu ── */
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('nav-links');
 
-    box.addEventListener('mousemove', (e) => {
-        const { left, top, width, height } = box.getBoundingClientRect();
-        const x = (e.clientX - left - width / 2) / 10; 
-        const y = (e.clientY - top - height / 2) / 10;
-        img.style.transform = `translate(${x}px, ${y}px) rotateX(${-y}deg) rotateY(${x}deg)`;
+hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
     });
+});
 
-    box.addEventListener('mouseleave', () => {
-        img.style.transform = `translate(0, 0) rotateX(0) rotateY(0)`;
-    });
+/* ── Cursor 3D tilt on photo ── */
+const box = document.getElementById('move-box');
+const img = document.getElementById('moving-img');
 
-    // 2. Scroll Reveal Animation Logic
-    function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-            if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
-            }
+box.addEventListener('mousemove', (e) => {
+    const { left, top, width, height } = box.getBoundingClientRect();
+    const x = (e.clientX - left - width  / 2) / 10;
+    const y = (e.clientY - top  - height / 2) / 10;
+    img.style.transform = `translate(${x}px, ${y}px) rotateX(${-y}deg) rotateY(${x}deg)`;
+});
+
+box.addEventListener('mouseleave', () => {
+    img.style.transform = 'translate(0,0) rotateX(0) rotateY(0)';
+});
+
+/* ── Scroll reveal ── */
+function reveal() {
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 120) {
+            el.classList.add('active');
         }
-    }
-    window.addEventListener("scroll", reveal);
-    reveal(); // Initial check
+    });
+}
+window.addEventListener('scroll', reveal);
+reveal();
+
+/* ── Active nav link on scroll ── */
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+    });
+});
 </script>
 
 </body>
