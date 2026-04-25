@@ -5,17 +5,10 @@
     --primary: #9d00ff;
     --accent: #00f2fe;
     --text: #ffffff;
-    --grid-color: rgba(157, 0, 255, 0.05);
 }
 
 body {
     background-color: var(--bg);
-    /* Step 1: Grid Background with Colors */
-    background-image: 
-        linear-gradient(var(--grid-color) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, rgba(157, 0, 255, 0.1), transparent 80%);
-    background-size: 30px 30px, 30px 30px, 100% 100%;
     color: var(--text);
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -23,43 +16,47 @@ body {
     overflow-x: hidden;
 }
 
-/* Step 4: Floating Image Animation */
+/* Hero Section Layout */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.hero-left { flex: 2; }
+.hero-right { flex: 1; text-align: center; }
+
 @keyframes floatImage {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(2deg); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 .profile-img {
-    width: 200px; height: 200px; border-radius: 50%;
+    width: 250px; height: 250px; border-radius: 50%;
     border: 3px solid var(--primary);
-    animation: floatImage 4s ease-in-out infinite; /* Hamesha hilti rahegi */
+    animation: floatImage 4s ease-in-out infinite;
     box-shadow: 0 0 20px var(--primary);
 }
 
-/* Step 3: Skill Boxes with Hover Animation */
-.skills-grid {
-    display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;
-}
-
+/* Skills/Toolkit Tags */
+.skills-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
 .skill-box {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #222;
-    padding: 12px 25px;
-    border-radius: 10px;
-    display: flex; align-items: center; gap: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
     transition: 0.3s;
 }
-
 .skill-box:hover {
-    transform: scale(1.1) rotate(2deg); /* Cursor jane par hilegi */
+    transform: scale(1.1);
     background: var(--primary);
-    border-color: var(--accent);
-    box-shadow: 0 0 15px var(--accent);
 }
 
-/* UI Interesting Elements */
-h2 { font-size: 2rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; }
-.glass-card { background: rgba(15, 15, 15, 0.8); border: 1px solid #222; border-radius: 15px; padding: 25px; backdrop-filter: blur(10px); }
+.container { padding: 60px 10%; }
+.glass-card { background: #0d0d0d; border: 1px solid #222; border-radius: 15px; padding: 25px; }
 .gradient-text { background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
-.btn { padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.btn { padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
 .btn-p { background: var(--primary); color: white; }
