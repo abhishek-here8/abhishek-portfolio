@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    /* Naya Background Color Palette */
     --bg-main: #0a0b1e; 
     --primary: #9d00ff;
     --accent: #00f2fe;
@@ -9,66 +8,68 @@
 }
 
 body {
-    /* Gradient Background - No more solid black */
     background: radial-gradient(circle at 0% 0%, #1a103d 0%, var(--bg-main) 50%, #050a18 100%);
     background-attachment: fixed;
     color: var(--text);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
-/* Hero Section Side-by-Side */
-.hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 100px 0 50px;
-}
+.container { padding: 60px 10%; }
 
+.hero-flex { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 0; }
 .hero-left { flex: 2; }
 .hero-right { flex: 1; text-align: center; }
 
 @keyframes floatImage {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-20px) scale(1.02); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
 .profile-img {
-    width: 260px; height: 260px; border-radius: 50%;
+    width: 250px; height: 250px; border-radius: 50%;
     border: 4px solid var(--primary);
     animation: floatImage 5s ease-in-out infinite;
     box-shadow: 0 0 30px rgba(157, 0, 255, 0.3);
-    object-fit: cover;
 }
 
-/* Glassmorphism Effect for Cards */
 .glass-card { 
     background: rgba(255, 255, 255, 0.03); 
     border: 1px solid rgba(255, 255, 255, 0.1); 
     border-radius: 20px; 
     padding: 25px; 
     backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(157, 0, 255, 0.25);
+    border-color: var(--primary);
+}
+
+.gradient-text { 
+    background: linear-gradient(90deg, var(--primary), var(--accent)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-weight: bold; 
 }
 
 .skill-box {
-    background: rgba(157, 0, 255, 0.1);
-    border: 1px solid rgba(157, 0, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
     padding: 12px 22px;
     border-radius: 12px;
-    transition: 0.4s;
-    cursor: default;
+    border: 1px solid #333;
+    transition: 0.3s;
 }
 
 .skill-box:hover {
-    transform: translateY(-5px) rotate(3deg);
+    transform: scale(1.1);
     background: var(--primary);
-    box-shadow: 0 0 20px var(--primary);
+    box-shadow: 0 10px 20px rgba(157, 0, 255, 0.4);
 }
 
-.container { padding: 60px 10%; }
-.gradient-text { background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
 .btn { padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
-.btn-p { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(157, 0, 255, 0.3); }
+.btn-p { background: var(--primary); color: white; }
+.btn-p:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--primary); }
