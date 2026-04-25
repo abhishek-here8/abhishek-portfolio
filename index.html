@@ -47,7 +47,7 @@
     </div>
 </section>
 
-<section id="about" class="container">
+<section id="about" class="container reveal">
     <h2 class="gradient-text">Academic Journey</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
         <div class="glass-card">
@@ -63,6 +63,7 @@
             <small>Passing Year: 2024</small>
         </div>
         <div class="glass-card">
+            <div style="position: absolute; top: 10px; right: 10px; font-size: 10px; background: gold; color: black; padding: 2px 8px; border-radius: 10px; font-weight: bold;">TOPPER</div>
             <h3>Secondary (HBSE)</h3>
             <p>Saraswati Vidya Mandir Senior Secondary School, Madhosinghana, Sirsa, Haryana</p>
             <p>Score: <span class="gradient-text">93.2%</span></p>
@@ -71,7 +72,7 @@
     </div>
 </section>
 
-<section id="projects" class="container">
+<section id="projects" class="container reveal">
     <h2 class="gradient-text">Featured Projects</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
         <div class="glass-card">
@@ -92,7 +93,7 @@
     </div>
 </section>
 
-<section id="skills" class="container">
+<section id="skills" class="container reveal">
     <h2 class="gradient-text">Technical Toolkit</h2>
     <div class="glass-card">
         <div class="skill-category">
@@ -119,14 +120,14 @@
         <div class="skill-category">
             <h4>Core Techniques</h4>
             <ul style="padding: 0; list-style: none; margin-top: 10px;">
-                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem; margin-bottom: 8px;"><i class="fa-solid fa-brain" style="color:var(--accent);"></i> Machine Learning & AI Fundamentals</li>
-                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem;"><i class="fa-solid fa-check" style="color:var(--accent);"></i> Problem Solving & Logical Thinking</li>
+                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem; margin-bottom: 8px;"><i class="fa-solid fa-brain"></i> Machine Learning & AI Fundamentals</li>
+                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem;"><i class="fa-solid fa-check"></i> Problem Solving & Logical Thinking</li>
             </ul>
         </div>
     </div>
 </section>
 
-<section id="youtube" class="container">
+<section id="youtube" class="container reveal">
     <div class="glass-card" style="text-align: center; border: 2px solid rgba(255, 0, 0, 0.3);">
         <h2 style="color: #ff0000;"><i class="fa-brands fa-youtube"></i> MIND BEHIND</h2>
         <p style="font-size: 1.2rem; color: #ccc;">Documenting the intersection of technology and history.</p>
@@ -134,14 +135,14 @@
     </div>
 </section>
 
-<section id="contact" class="container">
+<section id="contact" class="container reveal">
     <h2 class="gradient-text">Let's Connect</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         <div class="glass-card">
             <h3>Direct Info</h3>
-            <p style="margin-top: 15px;"><i class="fa-solid fa-envelope"></i> janduabhishek8@gmail.com</p>
-            <p><i class="fa-solid fa-phone"></i> +91 7027045075</p>
-            <p><i class="fa-solid fa-location-dot"></i> Sirsa, Haryana, India</p>
+            <p style="margin-top: 15px;"><i class="fa-solid fa-envelope" style="color:var(--primary);"></i> janduabhishek8@gmail.com</p>
+            <p><i class="fa-solid fa-phone" style="color:var(--primary);"></i> +91 7027045075</p>
+            <p><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> Sirsa, Haryana, India</p>
         </div>
         <div class="glass-card">
             <form action="https://formspree.io/f/xeevnyrv" method="POST" style="display:flex; flex-direction:column; gap:15px;">
@@ -159,6 +160,7 @@
 </footer>
 
 <script>
+    // 1. Cursor Movement Logic
     const box = document.getElementById('move-box');
     const img = document.getElementById('moving-img');
 
@@ -172,6 +174,21 @@
     box.addEventListener('mouseleave', () => {
         img.style.transform = `translate(0, 0) rotateX(0) rotateY(0)`;
     });
+
+    // 2. Scroll Reveal Animation Logic
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal(); // Initial check
 </script>
 
 </body>
