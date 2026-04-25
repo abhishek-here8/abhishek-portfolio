@@ -40,7 +40,9 @@
             </div>
         </div>
         <div class="hero-right">
-            <img src="profile.jpg" alt="Abhishek Jandu" class="profile-img">
+            <div class="image-container" id="move-box">
+                <img src="profile.jpg" alt="Abhishek Jandu" class="profile-img" id="moving-img">
+            </div>
         </div>
     </div>
 </section>
@@ -117,8 +119,8 @@
         <div class="skill-category">
             <h4>Core Techniques</h4>
             <ul style="padding: 0; list-style: none; margin-top: 10px;">
-                <li class="bullet-skill"><i class="fa-solid fa-brain" style="color:var(--accent);"></i> Machine Learning & AI Fundamentals</li>
-                <li class="bullet-skill"><i class="fa-solid fa-check" style="color:var(--accent);"></i> Problem Solving & Logical Thinking</li>
+                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem; margin-bottom: 8px;"><i class="fa-solid fa-brain" style="color:var(--accent);"></i> Machine Learning & AI Fundamentals</li>
+                <li class="bullet-skill" style="margin-left: 20px; color: #ccc; font-size: 1.1rem;"><i class="fa-solid fa-check" style="color:var(--accent);"></i> Problem Solving & Logical Thinking</li>
             </ul>
         </div>
     </div>
@@ -155,6 +157,22 @@
 <footer style="padding: 40px; text-align: center; opacity: 0.6;">
     &copy; 2026 Abhishek Jandu | All Rights Reserved.
 </footer>
+
+<script>
+    const box = document.getElementById('move-box');
+    const img = document.getElementById('moving-img');
+
+    box.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = box.getBoundingClientRect();
+        const x = (e.clientX - left - width / 2) / 10; 
+        const y = (e.clientY - top - height / 2) / 10;
+        img.style.transform = `translate(${x}px, ${y}px) rotateX(${-y}deg) rotateY(${x}deg)`;
+    });
+
+    box.addEventListener('mouseleave', () => {
+        img.style.transform = `translate(0, 0) rotateX(0) rotateY(0)`;
+    });
+</script>
 
 </body>
 </html>
